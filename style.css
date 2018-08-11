@@ -1,0 +1,41 @@
+body, body * {
+  display: flex;
+}
+
+#side-one, #side-two {
+  width: 100px;
+  height: 100px;
+}
+#side-one {
+  background: red;
+}
+#side-two {
+  background: green;
+}
+.card:hover .flip {
+  // transform: rotateZ(180deg);
+  transform: rotateY(180deg);
+}
+.card:hover #side-one {
+  opacity: 0;
+}
+.card:hover #side-two {
+  opacity: 0.5;
+}
+.flip {
+  height: 100px;
+  width: 100px;
+  transition: all 0.3s ease-in-out;
+}
+#side-one {
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+}
+#side-one {
+/*   z-index: 1; */
+}
+#side-two {
+/*   z-index: 0; */
+/*   transform: rotateY(180deg); */
+  opacity: 0;
+}
